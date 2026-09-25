@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ZeppSync is a personal Google Health integration for private daily history in Hermes.">
+  <title>ZeppSync · Personal health history</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <strong>ZeppSync</strong>
+      <a href="/">Home</a>
+      <a href="/privacy.html">Privacy policy</a>
+    </nav>
+  </header>
+  <main>
+    <p class="eyebrow">Personal integration · Hermes</p>
+    <h1>Your Zepp history, by day.</h1>
+    <p class="lead">ZeppSync lets one account owner keep a private daily history from Google Health and receive a short evening summary in their own Hermes Telegram chat.</p>
+
+    <section class="notice" aria-labelledby="health-disclosure">
+      <h2 id="health-disclosure">Before you grant Google Health access</h2>
+      <p>ZeppSync requests read-only access to activity and fitness, sleep, and health measurements. It selects records labelled as created by the Zepp app; these may include watch, phone, unknown-device, or manual records.</p>
+      <p>Selected records and daily summaries are stored encrypted on the owner’s private server. A short summary with steps, sleep and heart rate is sent to the owner’s Telegram chat. If the owner asks Hermes to analyze their history, the requested daily metrics may be sent to the AI model provider selected in Hermes. No data is used for advertising or sold.</p>
+      <p><strong>Only continue with Google consent if you agree to this processing and sharing.</strong> Read the <a href="/privacy.html">privacy policy</a> for retention, deletion and security details.</p>
+    </section>
+
+    <h2>What the integration shows</h2>
+    <ul>
+      <li>Steps, sleep and heart rate in a brief evening message.</li>
+      <li>Additional available metrics, such as distance, exercise, oxygen saturation and HRV, only when the owner asks Hermes.</li>
+      <li>A warning when the Zepp source does not confirm a watch, so phone or manual data is not presented as watch-only data.</li>
+    </ul>
+
+    <p class="muted">This is a personal-use integration. It does not provide medical advice or offer public accounts.</p>
+    <p lang="ru"><strong>Кратко:</strong> ZeppSync читает данные Zepp из Google Health, хранит историю на личном сервере в зашифрованном виде и отправляет короткую сводку в личный Telegram-чат. Данные с телефона и ручного ввода могут входить в историю. Подробности — в <a href="/privacy.html">политике конфиденциальности</a>.</p>
+  </main>
+  <footer>ZeppSync · Personal-use Hermes integration · <a href="mailto:ecoromus@gmail.com">Contact</a></footer>
+</body>
+</html>

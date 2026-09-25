@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How the personal ZeppSync integration reads, stores, shares and deletes Google Health data.">
+  <title>Privacy policy · ZeppSync</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <nav aria-label="Main navigation">
+      <strong>ZeppSync</strong>
+      <a href="/">Home</a>
+      <a href="/privacy.html" aria-current="page">Privacy policy</a>
+    </nav>
+  </header>
+  <main>
+    <p class="eyebrow">Last updated 25 September 2026</p>
+    <h1>Privacy policy</h1>
+    <p class="lead">ZeppSync is a personal-use integration for the owner of a Hermes assistant. This policy describes the Google Health data it accesses and what happens to that data.</p>
+
+    <h2>Data accessed</h2>
+    <p>With the owner’s affirmative Google OAuth consent, ZeppSync requests three read-only Google Health scopes: activity and fitness, sleep, and health metrics and measurements. It reads records whose application source is the Zepp app. Device metadata may identify a watch, phone, unknown device, or manual entry. ZeppSync does not request location, nutrition, profile, or write access.</p>
+    <p>Depending on the data Zepp makes available, records may include steps, sleep, heart rate, distance, active energy, exercise, resting heart rate, oxygen saturation, respiratory rate, VO2 max and heart-rate variability. A source label does not prove that every record came from a watch.</p>
+
+    <h2>Purpose and use</h2>
+    <p>ZeppSync builds a daily private history, produces a short evening summary, and answers the owner’s requests for additional daily metrics through Hermes. It is not used for advertising, profiling for eligibility decisions, or sale of data.</p>
+
+    <h2>Storage and security</h2>
+    <p>Selected raw records and daily summaries are stored in separate encrypted tables in a SQLite database on the owner’s private server. Day lookup keys are derived with HMAC. The OAuth refresh token is encrypted separately. The master key is supplied to the service through a protected runtime credential; backups are restricted to the owner. Network requests to Google use HTTPS. No public endpoint serves the stored health history.</p>
+
+    <h2>Sharing</h2>
+    <p>A short report containing steps, sleep and heart rate is sent to the owner’s Telegram chat using the existing Hermes bot. Telegram may retain those messages under its own policies. When the owner explicitly asks Hermes to analyze history, the requested daily metrics may be included in a request to whichever AI model provider the owner has selected in Hermes. ZeppSync does not sell data or share it with advertisers or data brokers.</p>
+
+    <h2>Retention, access and deletion</h2>
+    <p>There is currently no automatic expiration of the encrypted history; it remains until the owner requests deletion. Revoking ZeppSync in the Google Account permissions stops future API access but does not by itself delete previously stored records or Telegram messages. To delete ZeppSync data, the owner can contact the developer using the address below. The operator will stop sync, remove the encrypted health records and OAuth credential, and remove retained health backups. Messages already delivered to Telegram must be deleted in Telegram separately.</p>
+
+    <h2>Contact</h2>
+    <p>For access, deletion or questions, email <a href="mailto:ecoromus@gmail.com">ecoromus@gmail.com</a>. Please do not send health measurements by email.</p>
+
+    <p lang="ru"><strong>Для владельца:</strong> данные Zepp используются только для личной истории и сводок Hermes. История хранится зашифрованной до запроса на удаление. Вечерняя сводка отправляется в личный Telegram-чат; при запросе анализа отдельные дневные показатели могут быть переданы выбранному AI-провайдеру. Для удаления напиши на адрес выше, не прикладывая сами измерения.</p>
+  </main>
+  <footer>ZeppSync · <a href="/">Home</a> · <a href="mailto:ecoromus@gmail.com">Contact</a></footer>
+</body>
+</html>
